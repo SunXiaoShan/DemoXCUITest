@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -22,10 +23,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         mainTabBarController.tabBar.backgroundColor = UIColor.clear
         
         let imageSize = CGSize(width: 24, height: 24)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
         // create library controller
         let libraryImage = Utils.resizeImage(image: UIImage(named: "agenda")!, targetSize: imageSize)
-        let libraryViewController = LibraryViewController()
+        let libraryViewController = storyboard.instantiateViewController(withIdentifier: "LibraryViewController")
         libraryViewController.tabBarItem = UITabBarItem(
             title: "Library",
             image: libraryImage,
@@ -34,7 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // create people controller
         let peopleImage = Utils.resizeImage(image: UIImage(named: "myspace")!, targetSize: imageSize)
-        let peopleViewController = PeopleViewController()
+        let peopleViewController = storyboard.instantiateViewController(withIdentifier: "PeopleViewController")
         peopleViewController.tabBarItem = UITabBarItem(
             title: "People",
             image: peopleImage,
@@ -43,7 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // create setting controller
         let settingImage = Utils.resizeImage(image: UIImage(named: "configuration")!, targetSize: imageSize)
-        let settingViewController = SettingViewController()
+        let settingViewController = storyboard.instantiateViewController(withIdentifier: "SettingViewController")
         settingViewController.tabBarItem = UITabBarItem(
             title: "Setting",
             image: settingImage,

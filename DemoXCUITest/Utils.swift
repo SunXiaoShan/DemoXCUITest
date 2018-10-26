@@ -35,5 +35,4 @@ class Utils: NSObject {
         
         return newImage!
     }
-
 }
