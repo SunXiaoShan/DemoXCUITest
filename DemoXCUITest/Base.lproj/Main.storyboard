@@ -233,6 +233,42 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0tp-fp-CHa">
                                 <rect key="frame" x="0.0" y="20" width="375" height="598"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LibraryTableViewCell" rowHeight="354" id="XPW-jj-aM8" customClass="LibraryTableViewCell" customModule="DemoXCUITest" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="354"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XPW-jj-aM8" id="GmH-Fb-u51">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="353.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UHm-pH-Ak9">
+                                                    <rect key="frame" x="10" y="10" width="355" height="333.5"/>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9AF-x9-b8h">
+                                                    <rect key="frame" x="285" y="263.5" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="Ler-GW-7wY"/>
+                                                        <constraint firstAttribute="width" constant="50" id="V4i-WA-iNc"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button" image="play-button"/>
+                                                    <state key="highlighted" image="play-button-highlight"/>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="9AF-x9-b8h" secondAttribute="bottom" constant="40" id="Laa-aI-I6J"/>
+                                                <constraint firstAttribute="bottom" secondItem="UHm-pH-Ak9" secondAttribute="bottom" constant="10" id="NGF-U8-dQb"/>
+                                                <constraint firstItem="UHm-pH-Ak9" firstAttribute="leading" secondItem="GmH-Fb-u51" secondAttribute="leading" constant="10" id="ZxA-DT-t98"/>
+                                                <constraint firstAttribute="trailing" secondItem="UHm-pH-Ak9" secondAttribute="trailing" constant="10" id="pJw-T2-dKV"/>
+                                                <constraint firstItem="UHm-pH-Ak9" firstAttribute="top" secondItem="GmH-Fb-u51" secondAttribute="top" constant="10" id="uJD-hl-gdE"/>
+                                                <constraint firstAttribute="trailing" secondItem="9AF-x9-b8h" secondAttribute="trailing" constant="40" id="wl7-Ea-j64"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="mainImage" destination="UHm-pH-Ak9" id="QI3-RA-3hb"/>
+                                            <outlet property="playButton" destination="9AF-x9-b8h" id="bx0-YD-pAB"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -273,4 +309,8 @@
             <point key="canvasLocation" x="-1295" y="-111"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="play-button" width="102.40000152587891" height="102.40000152587891"/>
+        <image name="play-button-highlight" width="102.40000152587891" height="102.40000152587891"/>
+    </resources>
 </document>
