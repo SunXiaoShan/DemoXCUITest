@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7A2F35C2B9D548851825ED31 /* Pods_DemoXCUITest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EF7C9D3E54A1D9D96A96B11 /* Pods_DemoXCUITest.framework */; };
+		8F14CDB0218C2D4C00BDD680 /* PeopleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F14CDAF218C2D4C00BDD680 /* PeopleTableViewCell.swift */; };
 		8F90590D2182F9F500C250DC /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F90590C2182F9F500C250DC /* UserData.swift */; };
 		8FF928642182D27900F02300 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF928632182D27900F02300 /* AppDelegate.swift */; };
 		8FF928692182D27900F02300 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FF928672182D27900F02300 /* Main.storyboard */; };
@@ -47,6 +48,7 @@
 /* Begin PBXFileReference section */
 		2EF7C9D3E54A1D9D96A96B11 /* Pods_DemoXCUITest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoXCUITest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		64D8CE20C0FC3EBAEA07744F /* Pods-DemoXCUITest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoXCUITest.release.xcconfig"; path = "Pods/Target Support Files/Pods-DemoXCUITest/Pods-DemoXCUITest.release.xcconfig"; sourceTree = "<group>"; };
+		8F14CDAF218C2D4C00BDD680 /* PeopleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleTableViewCell.swift; sourceTree = "<group>"; };
 		8F90590C2182F9F500C250DC /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		8FF928602182D27900F02300 /* DemoXCUITest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoXCUITest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FF928632182D27900F02300 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +114,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8F14CDAE218C2D2300BDD680 /* People */ = {
+			isa = PBXGroup;
+			children = (
+				8F14CDAF218C2D4C00BDD680 /* PeopleTableViewCell.swift */,
+			);
+			path = People;
+			sourceTree = "<group>";
+		};
 		8F90590B2182F9D900C250DC /* UserData */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +179,7 @@
 		8FF9288E2182D92A00F02300 /* UIView */ = {
 			isa = PBXGroup;
 			children = (
+				8F14CDAE218C2D2300BDD680 /* People */,
 				8FF9289D2182E4FD00F02300 /* Setting */,
 				8FF928852182D90A00F02300 /* LibraryViewController.swift */,
 				8FF928882182D91A00F02300 /* PeopleViewController.swift */,
@@ -206,7 +217,6 @@
 				8FF9285C2182D27900F02300 /* Sources */,
 				8FF9285D2182D27900F02300 /* Frameworks */,
 				8FF9285E2182D27900F02300 /* Resources */,
-				EA1FBDA0C90CE200767B167B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -337,26 +347,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EA1FBDA0C90CE200767B167B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-DemoXCUITest/Pods-DemoXCUITest-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
-				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DemoXCUITest/Pods-DemoXCUITest-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -366,6 +356,7 @@
 			files = (
 				8FF928892182D91A00F02300 /* PeopleViewController.swift in Sources */,
 				8FF928842182D77D00F02300 /* MainTabBarViewController.swift in Sources */,
+				8F14CDB0218C2D4C00BDD680 /* PeopleTableViewCell.swift in Sources */,
 				8F90590D2182F9F500C250DC /* UserData.swift in Sources */,
 				8FF928862182D90A00F02300 /* LibraryViewController.swift in Sources */,
 				8FF928642182D27900F02300 /* AppDelegate.swift in Sources */,

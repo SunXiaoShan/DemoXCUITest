@@ -10,6 +10,8 @@ import UIKit
 
 class LibraryViewController: UIViewController {
 
+    
+    @IBOutlet weak var mainTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
