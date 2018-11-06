@@ -35,6 +35,10 @@
 		8FF9289C2182DD9000F02300 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF9289A2182DD9000F02300 /* Utils.swift */; };
 		8FF9289F2182E59800F02300 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF9289E2182E59800F02300 /* TableViewCell.swift */; };
 		8FF928A02182E59800F02300 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF9289E2182E59800F02300 /* TableViewCell.swift */; };
+		8FFA4EAE2191349C00B41E29 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFA4EAD2191349C00B41E29 /* SignInViewController.swift */; };
+		8FFA4EAF219134A100B41E29 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFA4EAD2191349C00B41E29 /* SignInViewController.swift */; };
+		8FFA4EC121916FC900B41E29 /* LibraryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFA4EC021916FC900B41E29 /* LibraryDetailViewController.swift */; };
+		8FFA4EC221916FCE00B41E29 /* LibraryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFA4EC021916FC900B41E29 /* LibraryDetailViewController.swift */; };
 		A566981F2182D5DAACC6AD8A /* Pods_DemoXCUITestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE48BE7D6D86B03809ED235C /* Pods_DemoXCUITestUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +76,8 @@
 		8FF928932182DD1100F02300 /* myspace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = myspace.png; sourceTree = "<group>"; };
 		8FF9289A2182DD9000F02300 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		8FF9289E2182E59800F02300 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		8FFA4EAD2191349C00B41E29 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		8FFA4EC021916FC900B41E29 /* LibraryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryDetailViewController.swift; sourceTree = "<group>"; };
 		927A9D4B98437DB3CF6C26B8 /* Pods-DemoXCUITestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoXCUITestUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DemoXCUITestUITests/Pods-DemoXCUITestUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A57D04637BAFFB41F61E04CB /* Pods-DemoXCUITest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoXCUITest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DemoXCUITest/Pods-DemoXCUITest.debug.xcconfig"; sourceTree = "<group>"; };
 		BE48BE7D6D86B03809ED235C /* Pods_DemoXCUITestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoXCUITestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,6 +127,7 @@
 		8F14CDAE218C2D2300BDD680 /* People */ = {
 			isa = PBXGroup;
 			children = (
+				8FFA4EBB21916A0000B41E29 /* chat */,
 				8F14CDAF218C2D4C00BDD680 /* PeopleTableViewCell.swift */,
 			);
 			path = People;
@@ -129,6 +136,7 @@
 		8F14CDB1218C492100BDD680 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				8FFA4EBF21916F8C00B41E29 /* LibraryDetail */,
 				8F14CDB2218C493800BDD680 /* LibraryTableViewCell.swift */,
 			);
 			path = Library;
@@ -214,9 +222,33 @@
 		8FF9289D2182E4FD00F02300 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
+				8FFA4EAC2191348000B41E29 /* SignIn */,
 				8FF9289E2182E59800F02300 /* TableViewCell.swift */,
 			);
 			path = Setting;
+			sourceTree = "<group>";
+		};
+		8FFA4EAC2191348000B41E29 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				8FFA4EAD2191349C00B41E29 /* SignInViewController.swift */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		8FFA4EBB21916A0000B41E29 /* chat */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = chat;
+			sourceTree = "<group>";
+		};
+		8FFA4EBF21916F8C00B41E29 /* LibraryDetail */ = {
+			isa = PBXGroup;
+			children = (
+				8FFA4EC021916FC900B41E29 /* LibraryDetailViewController.swift */,
+			);
+			path = LibraryDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,6 +262,7 @@
 				8FF9285C2182D27900F02300 /* Sources */,
 				8FF9285D2182D27900F02300 /* Frameworks */,
 				8FF9285E2182D27900F02300 /* Resources */,
+				46AD124911C6B1E502DA990A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -342,6 +375,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		46AD124911C6B1E502DA990A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DemoXCUITest/Pods-DemoXCUITest-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/YouTubePlayer/YouTubePlayer.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YouTubePlayer.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DemoXCUITest/Pods-DemoXCUITest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		D7334A1C8AC4416F0699BABA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -367,10 +422,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FFA4EAE2191349C00B41E29 /* SignInViewController.swift in Sources */,
 				8FF928892182D91A00F02300 /* PeopleViewController.swift in Sources */,
 				8FF928842182D77D00F02300 /* MainTabBarViewController.swift in Sources */,
 				8F14CDB0218C2D4C00BDD680 /* PeopleTableViewCell.swift in Sources */,
 				8F90590D2182F9F500C250DC /* UserData.swift in Sources */,
+				8FFA4EC121916FC900B41E29 /* LibraryDetailViewController.swift in Sources */,
 				8FF928862182D90A00F02300 /* LibraryViewController.swift in Sources */,
 				8FF928642182D27900F02300 /* AppDelegate.swift in Sources */,
 				8FF9288C2182D92600F02300 /* SettingViewController.swift in Sources */,
@@ -389,7 +446,9 @@
 				8FF928872182D90A00F02300 /* LibraryViewController.swift in Sources */,
 				8FF928792182D27B00F02300 /* DemoXCUITestUITests.swift in Sources */,
 				8F14CDB5218C494000BDD680 /* PeopleTableViewCell.swift in Sources */,
+				8FFA4EAF219134A100B41E29 /* SignInViewController.swift in Sources */,
 				8FF928A02182E59800F02300 /* TableViewCell.swift in Sources */,
+				8FFA4EC221916FCE00B41E29 /* LibraryDetailViewController.swift in Sources */,
 				8FF9288A2182D91A00F02300 /* PeopleViewController.swift in Sources */,
 				8FF9288D2182D92600F02300 /* SettingViewController.swift in Sources */,
 			);

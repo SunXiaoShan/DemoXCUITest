@@ -34,15 +34,30 @@ class SettingViewController: UIViewController {
     }
 
     @IBAction func actionButtonClick(_ sender: Any) {
+    
+        
         if (UserData.shared.isLogin() == false) {
             UserData.shared.setUserData()
             dataList = getUserData()
+            mainButton.setTitle("Sign Out", for: .normal)
+            switchToSignInPage()
         } else {
             UserData.shared.removeUserData()
             dataList = []
+            mainButton.setTitle("Sign In", for: .normal)
+            
         }
         
         mainTableView.reloadData()
+    }
+    
+    func switchToSignInPage() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "SignInViewController") as! SignInViewController
+        vc.view.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
+        present(vc, animated: true) {
+            
+        }
     }
 }
 
@@ -60,6 +75,7 @@ extension SettingViewController:UITableViewDataSource {
         
         cell.label?.text = data.title
         cell.detailLabel?.text = data.detail
+        cell.selectionStyle = .none
         
         return cell
         
