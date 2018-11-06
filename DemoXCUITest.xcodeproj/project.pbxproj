@@ -12,6 +12,7 @@
 		8F14CDB3218C493800BDD680 /* LibraryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F14CDB2218C493800BDD680 /* LibraryTableViewCell.swift */; };
 		8F14CDB4218C493C00BDD680 /* LibraryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F14CDB2218C493800BDD680 /* LibraryTableViewCell.swift */; };
 		8F14CDB5218C494000BDD680 /* PeopleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F14CDAF218C2D4C00BDD680 /* PeopleTableViewCell.swift */; };
+		8F1D119C2191B48D006097F6 /* LibraryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1D119B2191B48D006097F6 /* LibraryData.swift */; };
 		8F90590D2182F9F500C250DC /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F90590C2182F9F500C250DC /* UserData.swift */; };
 		8FF928642182D27900F02300 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF928632182D27900F02300 /* AppDelegate.swift */; };
 		8FF928692182D27900F02300 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FF928672182D27900F02300 /* Main.storyboard */; };
@@ -57,6 +58,7 @@
 		64D8CE20C0FC3EBAEA07744F /* Pods-DemoXCUITest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoXCUITest.release.xcconfig"; path = "Pods/Target Support Files/Pods-DemoXCUITest/Pods-DemoXCUITest.release.xcconfig"; sourceTree = "<group>"; };
 		8F14CDAF218C2D4C00BDD680 /* PeopleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleTableViewCell.swift; sourceTree = "<group>"; };
 		8F14CDB2218C493800BDD680 /* LibraryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryTableViewCell.swift; sourceTree = "<group>"; };
+		8F1D119B2191B48D006097F6 /* LibraryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryData.swift; sourceTree = "<group>"; };
 		8F90590C2182F9F500C250DC /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		8FF928602182D27900F02300 /* DemoXCUITest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoXCUITest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FF928632182D27900F02300 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -127,7 +129,6 @@
 		8F14CDAE218C2D2300BDD680 /* People */ = {
 			isa = PBXGroup;
 			children = (
-				8FFA4EBB21916A0000B41E29 /* chat */,
 				8F14CDAF218C2D4C00BDD680 /* PeopleTableViewCell.swift */,
 			);
 			path = People;
@@ -140,6 +141,14 @@
 				8F14CDB2218C493800BDD680 /* LibraryTableViewCell.swift */,
 			);
 			path = Library;
+			sourceTree = "<group>";
+		};
+		8F1D119A2191B42E006097F6 /* LibraryData */ = {
+			isa = PBXGroup;
+			children = (
+				8F1D119B2191B48D006097F6 /* LibraryData.swift */,
+			);
+			path = LibraryData;
 			sourceTree = "<group>";
 		};
 		8F90590B2182F9D900C250DC /* UserData */ = {
@@ -180,6 +189,7 @@
 				8FF928672182D27900F02300 /* Main.storyboard */,
 				8FF928832182D77D00F02300 /* MainTabBarViewController.swift */,
 				8FF928902182DCE800F02300 /* Resource */,
+				8F1D119A2191B42E006097F6 /* LibraryData */,
 				8FF9288E2182D92A00F02300 /* UIView */,
 				8F90590B2182F9D900C250DC /* UserData */,
 				8FF9289A2182DD9000F02300 /* Utils.swift */,
@@ -234,13 +244,6 @@
 				8FFA4EAD2191349C00B41E29 /* SignInViewController.swift */,
 			);
 			path = SignIn;
-			sourceTree = "<group>";
-		};
-		8FFA4EBB21916A0000B41E29 /* chat */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = chat;
 			sourceTree = "<group>";
 		};
 		8FFA4EBF21916F8C00B41E29 /* LibraryDetail */ = {
@@ -384,13 +387,11 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-DemoXCUITest/Pods-DemoXCUITest-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/YouTubePlayer/YouTubePlayer.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YouTubePlayer.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -434,6 +435,7 @@
 				8F14CDB3218C493800BDD680 /* LibraryTableViewCell.swift in Sources */,
 				8FF9289F2182E59800F02300 /* TableViewCell.swift in Sources */,
 				8FF9289B2182DD9000F02300 /* Utils.swift in Sources */,
+				8F1D119C2191B48D006097F6 /* LibraryData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,33 +9,7 @@
 import UIKit
 
 class LibraryViewController: UIViewController {
-    struct POIData {
-        var imageURL: String?
-    }
-    
-    lazy var libraryList:[POIData] = [
-        POIData(
-            imageURL: "RalphBreaks"
-        ),
-        POIData(
-            imageURL: "BigHero"
-        ),
-        POIData(
-        imageURL: "brave"
-        ),
-        POIData(
-        imageURL: "coco"
-        ),
-        POIData(
-        imageURL: "disneyposter53"
-        ),
-        POIData(
-        imageURL: "incredible"
-        ),
-        POIData(
-        imageURL: "mickey"
-        )
-    ]
+    lazy var libraryList:[POIData] = LibraryData.getLibraryDataList()
     
     @IBOutlet weak var mainTableView: UITableView!
     override func viewDidLoad() {
@@ -44,6 +18,15 @@ class LibraryViewController: UIViewController {
         // Do any additional setup after loading the view.
         mainTableView.dataSource = self
         mainTableView.delegate = self
+    }
+    
+    func switchToPOIPage(_ poiData:POIData) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "LibraryDetailViewController") as! LibraryDetailViewController
+        vc.poiData = poiData
+        vc.view.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
+        present(vc, animated: true) {
+        }
     }
 }
 
@@ -61,12 +44,15 @@ extension LibraryViewController: UITableViewDataSource {
         cell.selectionStyle = .none
         cell.mainImage?.image = UIImage.init(named: data.imageURL ?? "")
         cell.playButton.addTarget(self, action: #selector(actionPlay(_:)), for: .touchUpInside)
+        cell.playButton.tag = indexPath.row
         
         return cell
     }
     
     @objc func actionPlay(_ sender:UIButton) {
         print("fjiefjie")
+        let poiData = libraryList[sender.tag]
+        switchToPOIPage(poiData)
     }
     
     
