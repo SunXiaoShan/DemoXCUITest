@@ -59,7 +59,11 @@ class SignInViewController: UIViewController {
                 switch event {
                 case .success(let result):
                     print("result: ", result)
-                    self?.dismissPage()
+                    DispatchQueue.main.async { [weak self] in
+                        let account = self?.accountText.text ?? ""
+                        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "loginSuccess"), object: nil, userInfo: ["account": account])
+                        self?.dismissPage()
+                    }
                 case .error(let error):
                     print("error: ", error)
                 }

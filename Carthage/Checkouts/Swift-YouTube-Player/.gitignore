@@ -1,6 +1,7 @@
-# Xcode
+#Xcode
 .DS_Store
 */build/*
+build/*
 *.pbxuser
 !default.pbxuser
 *.mode1v3
@@ -16,13 +17,3 @@ DerivedData
 .idea/
 *.hmap
 *.xccheckout
-*.xcworkspace
-!default.xcworkspace
-
-#CocoaPods
-Pods
-!Podfile
-!Podfile.lock
-
-Carthage/Build
-

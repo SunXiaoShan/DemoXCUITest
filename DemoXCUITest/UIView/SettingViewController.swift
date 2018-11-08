@@ -23,8 +23,12 @@ class SettingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let nc = NotificationCenter.default
+        nc.addObserver(forName:Notification.Name(rawValue:"loginSuccess"), object:nil, queue:nil, using:catchNotification)
+        
         if (UserData.shared.isLogin() == false) {
             dataList = []
+            mainButton.setTitle("Sign In", for: .normal)
         }
         
         mainTableView.dataSource = self
@@ -34,18 +38,13 @@ class SettingViewController: UIViewController {
     }
 
     @IBAction func actionButtonClick(_ sender: Any) {
-    
-        
         if (UserData.shared.isLogin() == false) {
-            UserData.shared.setUserData()
-            dataList = getUserData()
-            mainButton.setTitle("Sign Out", for: .normal)
             switchToSignInPage()
         } else {
             UserData.shared.removeUserData()
             dataList = []
             mainButton.setTitle("Sign In", for: .normal)
-            
+            UserData.shared.removeUserData()
         }
         
         mainTableView.reloadData()
@@ -58,6 +57,18 @@ class SettingViewController: UIViewController {
         present(vc, animated: true) {
             
         }
+    }
+    
+    func catchNotification(notification:Notification) -> Void {
+        guard let userInfo = notification.userInfo,
+            let account  = userInfo["account"] as? String else {
+                return
+        }
+        
+        UserData.shared.setUserData()
+        dataList = getUserData()
+        mainButton.setTitle("Sign Out", for: .normal)
+        mainTableView.reloadData()
     }
 }
 

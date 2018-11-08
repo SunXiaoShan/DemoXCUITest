@@ -15,7 +15,10 @@ class LibraryDetailViewController: UIViewController {
     @IBOutlet weak var planeView: UIView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var okButton: UIButton!
-    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var labelTitle: UILabel!
+    @IBOutlet weak var labelContent: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -64,23 +67,16 @@ class LibraryDetailViewController: UIViewController {
     }
     
     func setupLabel() {
-        label.sizeToFit()
-        label.numberOfLines = 0
+
         
+        labelTitle.text = poiData?.movieName
+        labelTitle.sizeToFit()
+        labelTitle.lineBreakMode = NSLineBreakMode.byWordWrapping
         
-        //TODO
-        let maxFrameHeight = 75
+        labelContent.text = poiData?.content
+        labelContent.sizeToFit()
+        labelContent.lineBreakMode = NSLineBreakMode.byWordWrapping
         
-        myLabel = UILabel()
-        myLabel.frame = CGRect(x: 9, y: 9, width: 126, height: maxFrameHeight)
-        myLabel.text = "my labels text displayed"
-        myLabel.numberOfLines = 0
-        
-        myLabel.sizeToFit()
-        let newFrameHeight = myLabel.frame.size.height
-        let safeNewHeight = min(newFrameHeight, maxFrameHeight)
-        
-        myLabel.frame = CGRect(x: 9, y: 9, width: 126, height: safeNewHeight)
     }
     
 

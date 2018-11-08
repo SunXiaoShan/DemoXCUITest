@@ -24,7 +24,7 @@ class LibraryViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "LibraryDetailViewController") as! LibraryDetailViewController
         vc.poiData = poiData
-        vc.view.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
+        vc.view.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.8)
         present(vc, animated: true) {
         }
     }
@@ -50,7 +50,6 @@ extension LibraryViewController: UITableViewDataSource {
     }
     
     @objc func actionPlay(_ sender:UIButton) {
-        print("fjiefjie")
         let poiData = libraryList[sender.tag]
         switchToPOIPage(poiData)
     }

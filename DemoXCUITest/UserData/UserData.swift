@@ -34,9 +34,11 @@ class UserData {
     
     func removeUserData() {
         UserDefaults.standard.removeObject(forKey: "isLogin")
+        UserDefaults.standard.synchronize()
     }
     
     func setUserData() {
         UserDefaults.standard.set(true, forKey: "isLogin")
+        UserDefaults.standard.synchronize()
     }
 }

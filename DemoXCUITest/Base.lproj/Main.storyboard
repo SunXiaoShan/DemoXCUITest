@@ -427,25 +427,33 @@
                                             <constraint firstAttribute="width" constant="200" id="mnP-CL-7kj"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="fefjiejfeifjefjiefjifje" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJC-DB-K2W">
-                                        <rect key="frame" x="10" y="314" width="335" height="263"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label test" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJC-DB-K2W">
+                                        <rect key="frame" x="10" y="314" width="335" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                         <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LcR-7p-td2">
+                                        <rect key="frame" x="10" y="348" width="335" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="kJC-DB-K2W" firstAttribute="leading" secondItem="vNg-BY-HfS" secondAttribute="leading" constant="10" id="46S-Me-0bV"/>
+                                    <constraint firstItem="LcR-7p-td2" firstAttribute="top" secondItem="kJC-DB-K2W" secondAttribute="bottom" constant="10" id="6f0-Bp-gFT"/>
                                     <constraint firstItem="aSO-7l-wPq" firstAttribute="centerX" secondItem="vNg-BY-HfS" secondAttribute="centerX" id="Ca7-6D-mhd"/>
                                     <constraint firstAttribute="bottom" secondItem="R36-3e-mfB" secondAttribute="bottom" constant="10" id="FpJ-8r-eKl"/>
                                     <constraint firstItem="aSO-7l-wPq" firstAttribute="top" secondItem="vNg-BY-HfS" secondAttribute="top" constant="8" id="Lqq-RR-csa"/>
+                                    <constraint firstItem="kJC-DB-K2W" firstAttribute="top" secondItem="aSO-7l-wPq" secondAttribute="bottom" constant="10" id="R8X-KT-GhI"/>
                                     <constraint firstItem="R36-3e-mfB" firstAttribute="leading" secondItem="vNg-BY-HfS" secondAttribute="leading" constant="10" id="RwD-m9-tFy"/>
-                                    <constraint firstItem="kJC-DB-K2W" firstAttribute="top" secondItem="aSO-7l-wPq" secondAttribute="bottom" constant="10" id="cEw-vZ-34w"/>
+                                    <constraint firstAttribute="trailing" secondItem="kJC-DB-K2W" secondAttribute="trailing" constant="10" id="aWx-zT-ctn"/>
                                     <constraint firstItem="R36-3e-mfB" firstAttribute="centerX" secondItem="vNg-BY-HfS" secondAttribute="centerX" id="dEp-Wn-8VN"/>
-                                    <constraint firstItem="kJC-DB-K2W" firstAttribute="leading" secondItem="vNg-BY-HfS" secondAttribute="leading" constant="10" id="eOK-lZ-Nex"/>
-                                    <constraint firstItem="R36-3e-mfB" firstAttribute="top" secondItem="kJC-DB-K2W" secondAttribute="bottom" constant="10" id="iRu-EY-N4V"/>
+                                    <constraint firstAttribute="trailing" secondItem="LcR-7p-td2" secondAttribute="trailing" constant="10" id="eud-BB-TaB"/>
                                     <constraint firstAttribute="trailing" secondItem="R36-3e-mfB" secondAttribute="trailing" constant="10" id="oTi-7u-m3b"/>
-                                    <constraint firstAttribute="trailing" secondItem="kJC-DB-K2W" secondAttribute="trailing" constant="10" id="yan-bh-Vzt"/>
+                                    <constraint firstItem="LcR-7p-td2" firstAttribute="leading" secondItem="vNg-BY-HfS" secondAttribute="leading" constant="10" id="sa0-iO-HWK"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -460,7 +468,8 @@
                     </view>
                     <connections>
                         <outlet property="imageView" destination="aSO-7l-wPq" id="NCv-qa-lO3"/>
-                        <outlet property="label" destination="kJC-DB-K2W" id="4e6-he-egD"/>
+                        <outlet property="labelContent" destination="LcR-7p-td2" id="U3H-FY-dlx"/>
+                        <outlet property="labelTitle" destination="kJC-DB-K2W" id="27a-sE-S5F"/>
                         <outlet property="okButton" destination="R36-3e-mfB" id="LN8-ih-oKw"/>
                         <outlet property="planeView" destination="vNg-BY-HfS" id="00m-6l-0bA"/>
                     </connections>
