@@ -14,4 +14,10 @@ class LibraryPage: Page {
     func switchToLibrary() {
         libraryTab.tap()
     }
+    
+    func swipeToCell(_ index: Int) {
+        let table = app.tables.element(boundBy: 0)
+        let cell = table.cells.element(boundBy: index)
+        cell.tap()
+    }
 }

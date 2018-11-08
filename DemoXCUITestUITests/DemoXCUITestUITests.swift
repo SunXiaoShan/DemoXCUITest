@@ -31,19 +31,44 @@ class DemoXCUITestUITests: XCTestCase {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         
-        
-        let app = XCUIApplication()
-        app.tabBars.buttons["Library"].tap()
-        
-        let tablesQuery = app.tables.element(boundBy: 0)
-        XCTAssert(tablesQuery.cells.count > 3)
-        
-        let cell3 = tablesQuery.cells.element(boundBy: 3)
+        let library = LibraryPage.init(XCUIApplication())
+        library.switchToLibrary()
+        library.swipeToCell(2)
+        sleep(4)
         
         
+//        let app = XCUIApplication()
+//        app.tabBars.buttons["Library"].tap()
+//
+//        let table = app.tables.element(boundBy: 0)
+//        XCTAssert(table.cells.count > 3)
+//
+//        let cell3 = table.cells.element(boundBy: 3)
+//        cell3.buttons["Button"].tap()
+//        sleep(3)
+//
+//
+//
+//
+//        let app = XCUIApplication()
+//        app.tabBars.buttons["Library"].tap()
+//
+//        let tablesQuery = app.tables
+//        let button = tablesQuery/*@START_MENU_TOKEN@*/.buttons["Button"]/*[[".cells.buttons[\"Button\"]",".buttons[\"Button\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+//        button.tap()
+//        app.webViews.children(matching: .other).element.swipeDown()
+//        app.buttons["OK"].tap()
+//        button.swipeUp()
+//
+//        let button2 = tablesQuery.cells.containing(.image, identifier:"BigHero").buttons["Button"]
+//        button2.swipeUp()
+//        button2.tap()
         
-        tablesQuery.scroll
-        scrollToElement(cell3)
+//
+//
+//
+//        tablesQuery.scroll
+//        scrollToElement(cell3)
         
 //        let tablesQuery = app.tables
 //        tablesQuery/*@START_MENU_TOKEN@*/.buttons["Button"]/*[[".cells.buttons[\"Button\"]",".buttons[\"Button\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.swipeUp()
@@ -59,10 +84,7 @@ class DemoXCUITestUITests: XCTestCase {
        
 
         
-
-        
-     
-        
     }
-
+    
+   
 }
