@@ -59,8 +59,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             settingViewController
         ]
         
-        // default select index
-        mainTabBarController.selectedIndex = 1
+        if (UserData.shared.isLogin()) {
+            // default select index
+            mainTabBarController.selectedIndex = 1
+        } else {
+            mainTabBarController.selectedIndex = 2
+        }
         
         // set up window
         self.window = UIWindow(frame:UIScreen.main.bounds)

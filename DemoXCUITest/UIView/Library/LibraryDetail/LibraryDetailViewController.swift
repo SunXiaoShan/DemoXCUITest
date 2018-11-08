@@ -24,7 +24,7 @@ class LibraryDetailViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        guard poiData != nil else {
+        guard let poiData = poiData else {
             switchToLastPage()
             return
         }
@@ -34,13 +34,13 @@ class LibraryDetailViewController: UIViewController {
         setupOKButton()
         setupPlaneView()
         setupLabel()
-        imageView.image = UIImage.init(named: poiData?.imageURL ?? "")
+        imageView.image = UIImage.init(named: poiData.imageURL ?? "")
         
         let swipeDown = UISwipeGestureRecognizer(target: self, action: #selector(self.handleGesture(gesture:)))
         swipeDown.direction = .down
         self.view.addGestureRecognizer(swipeDown)
-        
-        videoPlayer.loadVideoID("Mro_40_Yen4")
+    
+        videoPlayer.loadVideoID(poiData.youtubeId ?? "")
         view.addSubview(videoPlayer)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 5) {

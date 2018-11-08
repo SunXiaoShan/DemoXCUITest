@@ -29,12 +29,22 @@ class SettingViewController: UIViewController {
         if (UserData.shared.isLogin() == false) {
             dataList = []
             mainButton.setTitle("Sign In", for: .normal)
+            switchToSignInPage()
         }
         
         mainTableView.dataSource = self
         mainTableView.delegate = self
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if (UserData.shared.isLogin() == false) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
+                self?.switchToSignInPage()
+            }
+        }
     }
 
     @IBAction func actionButtonClick(_ sender: Any) {
@@ -95,7 +105,6 @@ extension SettingViewController:UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60
     }
-    
 }
 
 extension SettingViewController:UITableViewDelegate {
