@@ -13,6 +13,7 @@
 		8F14CDB4218C493C00BDD680 /* LibraryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F14CDB2218C493800BDD680 /* LibraryTableViewCell.swift */; };
 		8F14CDB5218C494000BDD680 /* PeopleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F14CDAF218C2D4C00BDD680 /* PeopleTableViewCell.swift */; };
 		8F1D119C2191B48D006097F6 /* LibraryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1D119B2191B48D006097F6 /* LibraryData.swift */; };
+		8F33337F2193D4C000CFD4D7 /* YouTubePlayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8F33337D2193D4C000CFD4D7 /* YouTubePlayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8F90590D2182F9F500C250DC /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F90590C2182F9F500C250DC /* UserData.swift */; };
 		8FF928642182D27900F02300 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF928632182D27900F02300 /* AppDelegate.swift */; };
 		8FF928692182D27900F02300 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FF928672182D27900F02300 /* Main.storyboard */; };
@@ -53,12 +54,28 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		8F3333802193D4C000CFD4D7 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8F33337F2193D4C000CFD4D7 /* YouTubePlayer.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		2EF7C9D3E54A1D9D96A96B11 /* Pods_DemoXCUITest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoXCUITest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		64D8CE20C0FC3EBAEA07744F /* Pods-DemoXCUITest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoXCUITest.release.xcconfig"; path = "Pods/Target Support Files/Pods-DemoXCUITest/Pods-DemoXCUITest.release.xcconfig"; sourceTree = "<group>"; };
 		8F14CDAF218C2D4C00BDD680 /* PeopleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleTableViewCell.swift; sourceTree = "<group>"; };
 		8F14CDB2218C493800BDD680 /* LibraryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryTableViewCell.swift; sourceTree = "<group>"; };
 		8F1D119B2191B48D006097F6 /* LibraryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryData.swift; sourceTree = "<group>"; };
+		8F3333792193D3C000CFD4D7 /* YouTubePlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YouTubePlayer.framework; path = Carthage/Build/iOS/YouTubePlayer.framework; sourceTree = "<group>"; };
+		8F33337D2193D4C000CFD4D7 /* YouTubePlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YouTubePlayer.framework; path = Carthage/Build/iOS/YouTubePlayer.framework; sourceTree = "<group>"; };
 		8F90590C2182F9F500C250DC /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		8FF928602182D27900F02300 /* DemoXCUITest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoXCUITest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FF928632182D27900F02300 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -120,6 +137,7 @@
 		585C432F94C04510AC9ABF28 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8F3333792193D3C000CFD4D7 /* YouTubePlayer.framework */,
 				2EF7C9D3E54A1D9D96A96B11 /* Pods_DemoXCUITest.framework */,
 				BE48BE7D6D86B03809ED235C /* Pods_DemoXCUITestUITests.framework */,
 			);
@@ -162,6 +180,7 @@
 		8FF928572182D27900F02300 = {
 			isa = PBXGroup;
 			children = (
+				8F33337D2193D4C000CFD4D7 /* YouTubePlayer.framework */,
 				8FF928622182D27900F02300 /* DemoXCUITest */,
 				8FF928772182D27B00F02300 /* DemoXCUITestUITests */,
 				8FF928612182D27900F02300 /* Products */,
@@ -266,6 +285,8 @@
 				8FF9285D2182D27900F02300 /* Frameworks */,
 				8FF9285E2182D27900F02300 /* Resources */,
 				46AD124911C6B1E502DA990A /* [CP] Embed Pods Frameworks */,
+				8F33337B2193D3D800CFD4D7 /* ShellScript */,
+				8F3333802193D4C000CFD4D7 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -397,6 +418,24 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DemoXCUITest/Pods-DemoXCUITest-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		8F33337B2193D3D800CFD4D7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/YouTubePlayer.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
 		};
 		D7334A1C8AC4416F0699BABA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -609,6 +648,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YXTP59538K;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = DemoXCUITest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -629,6 +672,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YXTP59538K;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = DemoXCUITest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (

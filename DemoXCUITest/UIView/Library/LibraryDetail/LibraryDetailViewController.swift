@@ -7,17 +7,18 @@
 //
 
 import UIKit
+import YouTubePlayer
 
 class LibraryDetailViewController: UIViewController {
 
     open var poiData:POIData?
+    var videoPlayer = YouTubePlayerView(frame: CGRect(x: 0, y: UIScreen.main.bounds.size.height, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height))
     
     @IBOutlet weak var planeView: UIView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var okButton: UIButton!
     @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var labelContent: UILabel!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +36,19 @@ class LibraryDetailViewController: UIViewController {
         setupLabel()
         imageView.image = UIImage.init(named: poiData?.imageURL ?? "")
         
+        let swipeDown = UISwipeGestureRecognizer(target: self, action: #selector(self.handleGesture(gesture:)))
+        swipeDown.direction = .down
+        self.view.addGestureRecognizer(swipeDown)
+        
+        videoPlayer.loadVideoID("Mro_40_Yen4")
+        view.addSubview(videoPlayer)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+            UIView.animate(withDuration: 0.5, delay: 0.0, options: UIView.AnimationOptions.curveEaseOut, animations: {
+                self.videoPlayer.frame.origin.y -= UIScreen.main.bounds.size.height
+                self.view.layoutIfNeeded()
+            }, completion: nil)
+        }
     }
     
     func switchToLastPage() {
@@ -67,8 +81,6 @@ class LibraryDetailViewController: UIViewController {
     }
     
     func setupLabel() {
-
-        
         labelTitle.text = poiData?.movieName
         labelTitle.sizeToFit()
         labelTitle.lineBreakMode = NSLineBreakMode.byWordWrapping
@@ -76,9 +88,14 @@ class LibraryDetailViewController: UIViewController {
         labelContent.text = poiData?.content
         labelContent.sizeToFit()
         labelContent.lineBreakMode = NSLineBreakMode.byWordWrapping
-        
     }
     
-
-
+    @objc func handleGesture(gesture: UISwipeGestureRecognizer) -> Void {
+        if gesture.direction == .down {
+            UIView.animate(withDuration: 0.2, delay: 0.0, options: UIView.AnimationOptions.curveEaseOut, animations: {
+                self.videoPlayer.frame.origin.y += UIScreen.main.bounds.size.height
+                self.view.layoutIfNeeded()
+            }, completion: nil)
+        }
+    }
 }
