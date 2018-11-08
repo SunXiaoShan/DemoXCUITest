@@ -7,13 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7A2F35C2B9D548851825ED31 /* Pods_DemoXCUITest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EF7C9D3E54A1D9D96A96B11 /* Pods_DemoXCUITest.framework */; };
+		7A2F35C2B9D548851825ED31 /* Pods_DemoXCUITest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EF7C9D3E54A1D9D96A96B11 /* Pods_DemoXCUITest.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		8F14CDB0218C2D4C00BDD680 /* PeopleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F14CDAF218C2D4C00BDD680 /* PeopleTableViewCell.swift */; };
 		8F14CDB3218C493800BDD680 /* LibraryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F14CDB2218C493800BDD680 /* LibraryTableViewCell.swift */; };
 		8F14CDB4218C493C00BDD680 /* LibraryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F14CDB2218C493800BDD680 /* LibraryTableViewCell.swift */; };
 		8F14CDB5218C494000BDD680 /* PeopleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F14CDAF218C2D4C00BDD680 /* PeopleTableViewCell.swift */; };
 		8F1D119C2191B48D006097F6 /* LibraryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1D119B2191B48D006097F6 /* LibraryData.swift */; };
 		8F33337F2193D4C000CFD4D7 /* YouTubePlayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8F33337D2193D4C000CFD4D7 /* YouTubePlayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8F3333832194063000CFD4D7 /* LibraryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1D119B2191B48D006097F6 /* LibraryData.swift */; };
+		8F3333842194064000CFD4D7 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F90590C2182F9F500C250DC /* UserData.swift */; };
+		8F3333872194088D00CFD4D7 /* YouTubePlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F3333792193D3C000CFD4D7 /* YouTubePlayer.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		8F33338921940DE300CFD4D7 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F33338821940DE300CFD4D7 /* RxCocoa.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		8F33338B21940DE300CFD4D7 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F33338A21940DE300CFD4D7 /* RxSwift.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		8F33338D219421BE00CFD4D7 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F33338C219421BE00CFD4D7 /* Page.swift */; };
+		8F33338F2194240000CFD4D7 /* LibraryPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F33338E2194240000CFD4D7 /* LibraryPage.swift */; };
 		8F90590D2182F9F500C250DC /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F90590C2182F9F500C250DC /* UserData.swift */; };
 		8FF928642182D27900F02300 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF928632182D27900F02300 /* AppDelegate.swift */; };
 		8FF928692182D27900F02300 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FF928672182D27900F02300 /* Main.storyboard */; };
@@ -76,6 +83,10 @@
 		8F1D119B2191B48D006097F6 /* LibraryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryData.swift; sourceTree = "<group>"; };
 		8F3333792193D3C000CFD4D7 /* YouTubePlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YouTubePlayer.framework; path = Carthage/Build/iOS/YouTubePlayer.framework; sourceTree = "<group>"; };
 		8F33337D2193D4C000CFD4D7 /* YouTubePlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YouTubePlayer.framework; path = Carthage/Build/iOS/YouTubePlayer.framework; sourceTree = "<group>"; };
+		8F33338821940DE300CFD4D7 /* RxCocoa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RxCocoa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F33338A21940DE300CFD4D7 /* RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F33338C219421BE00CFD4D7 /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
+		8F33338E2194240000CFD4D7 /* LibraryPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryPage.swift; sourceTree = "<group>"; };
 		8F90590C2182F9F500C250DC /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		8FF928602182D27900F02300 /* DemoXCUITest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoXCUITest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FF928632182D27900F02300 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F3333872194088D00CFD4D7 /* YouTubePlayer.framework in Frameworks */,
 				7A2F35C2B9D548851825ED31 /* Pods_DemoXCUITest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -116,6 +128,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F33338921940DE300CFD4D7 /* RxCocoa.framework in Frameworks */,
+				8F33338B21940DE300CFD4D7 /* RxSwift.framework in Frameworks */,
 				A566981F2182D5DAACC6AD8A /* Pods_DemoXCUITestUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,6 +151,8 @@
 		585C432F94C04510AC9ABF28 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8F33338821940DE300CFD4D7 /* RxCocoa.framework */,
+				8F33338A21940DE300CFD4D7 /* RxSwift.framework */,
 				8F3333792193D3C000CFD4D7 /* YouTubePlayer.framework */,
 				2EF7C9D3E54A1D9D96A96B11 /* Pods_DemoXCUITest.framework */,
 				BE48BE7D6D86B03809ED235C /* Pods_DemoXCUITestUITests.framework */,
@@ -220,6 +236,8 @@
 			isa = PBXGroup;
 			children = (
 				8FF928782182D27B00F02300 /* DemoXCUITestUITests.swift */,
+				8F33338E2194240000CFD4D7 /* LibraryPage.swift */,
+				8F33338C219421BE00CFD4D7 /* Page.swift */,
 				8FF9287A2182D27B00F02300 /* Info.plist */,
 			);
 			path = DemoXCUITestUITests;
@@ -305,6 +323,8 @@
 				8FF928702182D27B00F02300 /* Sources */,
 				8FF928712182D27B00F02300 /* Frameworks */,
 				8FF928722182D27B00F02300 /* Resources */,
+				8F3333862194080E00CFD4D7 /* ShellScript */,
+				6FF5AC8115D81DD61AE27196 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -419,17 +439,47 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DemoXCUITest/Pods-DemoXCUITest-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		6FF5AC8115D81DD61AE27196 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DemoXCUITestUITests/Pods-DemoXCUITestUITests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DemoXCUITestUITests/Pods-DemoXCUITestUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		8F33337B2193D3D800CFD4D7 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/YouTubePlayer.framework",
 			);
-			outputFileListPaths = (
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
+		};
+		8F3333862194080E00CFD4D7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/YouTubePlayer.framework",
 			);
 			outputPaths = (
 			);
@@ -483,14 +533,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				8FF9289C2182DD9000F02300 /* Utils.swift in Sources */,
+				8F33338D219421BE00CFD4D7 /* Page.swift in Sources */,
+				8F3333832194063000CFD4D7 /* LibraryData.swift in Sources */,
 				8F14CDB4218C493C00BDD680 /* LibraryTableViewCell.swift in Sources */,
 				8FF928872182D90A00F02300 /* LibraryViewController.swift in Sources */,
 				8FF928792182D27B00F02300 /* DemoXCUITestUITests.swift in Sources */,
 				8F14CDB5218C494000BDD680 /* PeopleTableViewCell.swift in Sources */,
+				8F3333842194064000CFD4D7 /* UserData.swift in Sources */,
 				8FFA4EAF219134A100B41E29 /* SignInViewController.swift in Sources */,
 				8FF928A02182E59800F02300 /* TableViewCell.swift in Sources */,
 				8FFA4EC221916FCE00B41E29 /* LibraryDetailViewController.swift in Sources */,
 				8FF9288A2182D91A00F02300 /* PeopleViewController.swift in Sources */,
+				8F33338F2194240000CFD4D7 /* LibraryPage.swift in Sources */,
 				8FF9288D2182D92600F02300 /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -696,6 +750,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YXTP59538K;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = DemoXCUITestUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -717,6 +775,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YXTP59538K;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = DemoXCUITestUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
