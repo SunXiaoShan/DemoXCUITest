@@ -21,6 +21,10 @@
 		8F33338B21940DE300CFD4D7 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F33338A21940DE300CFD4D7 /* RxSwift.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		8F33338D219421BE00CFD4D7 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F33338C219421BE00CFD4D7 /* Page.swift */; };
 		8F33338F2194240000CFD4D7 /* LibraryPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F33338E2194240000CFD4D7 /* LibraryPage.swift */; };
+		8F64803A21951F0900D290A7 /* LibraryDetailPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F64803921951F0900D290A7 /* LibraryDetailPage.swift */; };
+		8F64803C21956BDD00D290A7 /* PeoplePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F64803B21956BDD00D290A7 /* PeoplePage.swift */; };
+		8F64803E21957D4000D290A7 /* SettingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F64803D21957D4000D290A7 /* SettingPage.swift */; };
+		8F64804021957E9E00D290A7 /* SignInPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F64803F21957E9E00D290A7 /* SignInPage.swift */; };
 		8F90590D2182F9F500C250DC /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F90590C2182F9F500C250DC /* UserData.swift */; };
 		8FF928642182D27900F02300 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF928632182D27900F02300 /* AppDelegate.swift */; };
 		8FF928692182D27900F02300 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FF928672182D27900F02300 /* Main.storyboard */; };
@@ -87,6 +91,10 @@
 		8F33338A21940DE300CFD4D7 /* RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F33338C219421BE00CFD4D7 /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 		8F33338E2194240000CFD4D7 /* LibraryPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryPage.swift; sourceTree = "<group>"; };
+		8F64803921951F0900D290A7 /* LibraryDetailPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryDetailPage.swift; sourceTree = "<group>"; };
+		8F64803B21956BDD00D290A7 /* PeoplePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeoplePage.swift; sourceTree = "<group>"; };
+		8F64803D21957D4000D290A7 /* SettingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingPage.swift; sourceTree = "<group>"; };
+		8F64803F21957E9E00D290A7 /* SignInPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPage.swift; sourceTree = "<group>"; };
 		8F90590C2182F9F500C250DC /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		8FF928602182D27900F02300 /* DemoXCUITest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoXCUITest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FF928632182D27900F02300 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -236,7 +244,11 @@
 			isa = PBXGroup;
 			children = (
 				8FF928782182D27B00F02300 /* DemoXCUITestUITests.swift */,
+				8F64803F21957E9E00D290A7 /* SignInPage.swift */,
+				8F64803D21957D4000D290A7 /* SettingPage.swift */,
+				8F64803B21956BDD00D290A7 /* PeoplePage.swift */,
 				8F33338E2194240000CFD4D7 /* LibraryPage.swift */,
+				8F64803921951F0900D290A7 /* LibraryDetailPage.swift */,
 				8F33338C219421BE00CFD4D7 /* Page.swift */,
 				8FF9287A2182D27B00F02300 /* Info.plist */,
 			);
@@ -533,6 +545,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8FF9289C2182DD9000F02300 /* Utils.swift in Sources */,
+				8F64803A21951F0900D290A7 /* LibraryDetailPage.swift in Sources */,
 				8F33338D219421BE00CFD4D7 /* Page.swift in Sources */,
 				8F3333832194063000CFD4D7 /* LibraryData.swift in Sources */,
 				8F14CDB4218C493C00BDD680 /* LibraryTableViewCell.swift in Sources */,
@@ -541,9 +554,12 @@
 				8F14CDB5218C494000BDD680 /* PeopleTableViewCell.swift in Sources */,
 				8F3333842194064000CFD4D7 /* UserData.swift in Sources */,
 				8FFA4EAF219134A100B41E29 /* SignInViewController.swift in Sources */,
+				8F64803E21957D4000D290A7 /* SettingPage.swift in Sources */,
 				8FF928A02182E59800F02300 /* TableViewCell.swift in Sources */,
 				8FFA4EC221916FCE00B41E29 /* LibraryDetailViewController.swift in Sources */,
 				8FF9288A2182D91A00F02300 /* PeopleViewController.swift in Sources */,
+				8F64804021957E9E00D290A7 /* SignInPage.swift in Sources */,
+				8F64803C21956BDD00D290A7 /* PeoplePage.swift in Sources */,
 				8F33338F2194240000CFD4D7 /* LibraryPage.swift in Sources */,
 				8FF9288D2182D92600F02300 /* SettingViewController.swift in Sources */,
 			);

@@ -43,7 +43,7 @@ class LibraryDetailViewController: UIViewController {
         videoPlayer.loadVideoID(poiData.youtubeId ?? "")
         view.addSubview(videoPlayer)
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             UIView.animate(withDuration: 0.5, delay: 0.0, options: UIView.AnimationOptions.curveEaseOut, animations: {
                 self.videoPlayer.frame.origin.y -= UIScreen.main.bounds.size.height
                 self.view.layoutIfNeeded()
@@ -95,6 +95,8 @@ class LibraryDetailViewController: UIViewController {
             UIView.animate(withDuration: 0.2, delay: 0.0, options: UIView.AnimationOptions.curveEaseOut, animations: {
                 self.videoPlayer.frame.origin.y += UIScreen.main.bounds.size.height
                 self.view.layoutIfNeeded()
+                self.videoPlayer.stop()
+                self.videoPlayer.clear()
             }, completion: nil)
         }
     }

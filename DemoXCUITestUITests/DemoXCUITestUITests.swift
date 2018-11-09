@@ -31,57 +31,116 @@ class DemoXCUITestUITests: XCTestCase {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         
-        let library = LibraryPage.init(XCUIApplication())
-        library.switchToLibrary()
-        library.swipeToCell(2)
+        let firstPage = PeoplePage.init(XCUIApplication())
+        firstPage
+            .on(page: LibraryPage.self)
+            .switchToLibrary()
+            .tapTableViewCell(2)
+            .actionPlayButton(2)
+            .waitForChangView(0)
+            
+            .on(page: LibraryDetailPage.self)
+            .waitLoadYoutubeData()
+            // .playYoutubeVideo()
+            // .waitVideoReload()
+            .dismissYoutubeView()
+            .actionOKButton()
+            .waitForChangView(2)
+            
+            .on(page: LibraryPage.self)
+            .tapTableViewCell(0)
+            .actionPlayButton(0)
+
+            .on(page: LibraryDetailPage.self)
+            .waitLoadYoutubeData()
+        //   .playYoutubeVideo()
+        //   .waitVideoReload()
+            .dismissYoutubeView()
+            .actionOKButton()
+            
+            .on(page: LibraryPage.self)
+            .waitForChangView(0)
+            
+            .on(page: PeoplePage.self)
+            .waitForChangView(0)
+            .switchToPeople()
+            .swipeDownTableView()
+            .swipeDownTableView()
+            .swipeUpTableView()
+        
+            .on(page: SettingPage.self)
+            .switchToSetting()
+            .waitForChangView(0)
+            .actionSignOut()
+            .actionSignIn()
+            
+            .on(page: SignInPage.self)
+            .waitForChangView(1)
+            .textAccount("Hello World!!")
+            .hideKeyboard()
+            .textPassword("This is Auto-test")
+            .hideKeyboard()
+            .actionSignIn()
+        
         sleep(4)
         
         
-//        let app = XCUIApplication()
-//        app.tabBars.buttons["Library"].tap()
-//
-//        let table = app.tables.element(boundBy: 0)
-//        XCTAssert(table.cells.count > 3)
-//
-//        let cell3 = table.cells.element(boundBy: 3)
-//        cell3.buttons["Button"].tap()
-//        sleep(3)
-//
-//
-//
-//
-//        let app = XCUIApplication()
-//        app.tabBars.buttons["Library"].tap()
-//
-//        let tablesQuery = app.tables
-//        let button = tablesQuery/*@START_MENU_TOKEN@*/.buttons["Button"]/*[[".cells.buttons[\"Button\"]",".buttons[\"Button\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
-//        button.tap()
-//        app.webViews.children(matching: .other).element.swipeDown()
-//        app.buttons["OK"].tap()
-//        button.swipeUp()
-//
-//        let button2 = tablesQuery.cells.containing(.image, identifier:"BigHero").buttons["Button"]
-//        button2.swipeUp()
-//        button2.tap()
         
+//        let library = LibraryPage.init(XCUIApplication())
+//        library.switchToLibrary()
+//               .tapTableViewCell(2)
+//               .actionPlayButton(2)
+//        
 //
+//        LibraryDetailPage.init(XCUIApplication())
+//        
 //
+//        sleep(2)
+//        
+//        library.tapTableViewCell(0)
+//               .actionPlayButton(0)
+//        
+//        LibraryDetailPage.init(XCUIApplication())
+//                      .waitLoadYoutubeData()
+////                      .playYoutubeVideo()
+////                      .waitVideoReload()
+//                      .dismissYoutubeView()
+//                      .actionOKButton()
 //
-//        tablesQuery.scroll
-//        scrollToElement(cell3)
+//        sleep(4)
         
-//        let tablesQuery = app.tables
-//        tablesQuery/*@START_MENU_TOKEN@*/.buttons["Button"]/*[[".cells.buttons[\"Button\"]",".buttons[\"Button\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.swipeUp()
-//
-//        let button = tablesQuery.cells.containing(.image, identifier:"BigHero").buttons["Button"]
-//        button/*@START_MENU_TOKEN@*/.press(forDuration: 0.8);/*[[".tap()",".press(forDuration: 0.8);"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
-//        button.swipeUp()
-//        button.swipeUp()
-//
-//        let button2 = tablesQuery.cells.containing(.image, identifier:"brave").buttons["Button"]
-//        button2.swipeUp()
-//        button2.tap()
-       
+        
+    }
+    
+    func testTe() {
+        
+        
+        let app = XCUIApplication()
+        app.tabBars.buttons["Setting"].tap()
+        app.buttons["Sign Out"].tap()
+        app.buttons["Sign In"].tap()
+        app.textFields["Account / Email"].tap()
+        
+        let fKey = app/*@START_MENU_TOKEN@*/.keys["f"]/*[[".keyboards.keys[\"f\"]",".keys[\"f\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+        fKey.tap()
+        fKey.tap()
+        fKey.tap()
+        fKey.tap()
+        fKey.tap()
+        app.textFields["Password"].tap()
+        fKey.tap()
+        
+        let dKey = app/*@START_MENU_TOKEN@*/.keys["d"]/*[[".keyboards.keys[\"d\"]",".keys[\"d\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+        dKey.tap()
+        dKey.tap()
+        fKey.tap()
+        fKey.tap()
+        fKey.tap()
+        
+        let element = app.children(matching: .window).element(boundBy: 0).children(matching: .other).element(boundBy: 1)
+        element.children(matching: .other).element.children(matching: .other).element.tap()
+        element.buttons["Sign In"].tap()
+
 
         
     }
