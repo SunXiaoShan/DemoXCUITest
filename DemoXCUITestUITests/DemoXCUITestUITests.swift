@@ -83,67 +83,7 @@ class DemoXCUITestUITests: XCTestCase {
             .actionSignIn()
         
         sleep(4)
-        
-        
-        
-//        let library = LibraryPage.init(XCUIApplication())
-//        library.switchToLibrary()
-//               .tapTableViewCell(2)
-//               .actionPlayButton(2)
-//        
-//
-//        LibraryDetailPage.init(XCUIApplication())
-//        
-//
-//        sleep(2)
-//        
-//        library.tapTableViewCell(0)
-//               .actionPlayButton(0)
-//        
-//        LibraryDetailPage.init(XCUIApplication())
-//                      .waitLoadYoutubeData()
-////                      .playYoutubeVideo()
-////                      .waitVideoReload()
-//                      .dismissYoutubeView()
-//                      .actionOKButton()
-//
-//        sleep(4)
-        
-        
-    }
-    
-    func testTe() {
-        
-        
-        let app = XCUIApplication()
-        app.tabBars.buttons["Setting"].tap()
-        app.buttons["Sign Out"].tap()
-        app.buttons["Sign In"].tap()
-        app.textFields["Account / Email"].tap()
-        
-        let fKey = app/*@START_MENU_TOKEN@*/.keys["f"]/*[[".keyboards.keys[\"f\"]",".keys[\"f\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
-        fKey.tap()
-        fKey.tap()
-        fKey.tap()
-        fKey.tap()
-        fKey.tap()
-        app.textFields["Password"].tap()
-        fKey.tap()
-        
-        let dKey = app/*@START_MENU_TOKEN@*/.keys["d"]/*[[".keyboards.keys[\"d\"]",".keys[\"d\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
-        dKey.tap()
-        dKey.tap()
-        fKey.tap()
-        fKey.tap()
-        fKey.tap()
-        
-        let element = app.children(matching: .window).element(boundBy: 0).children(matching: .other).element(boundBy: 1)
-        element.children(matching: .other).element.children(matching: .other).element.tap()
-        element.buttons["Sign In"].tap()
-
 
         
     }
-    
-   
 }
