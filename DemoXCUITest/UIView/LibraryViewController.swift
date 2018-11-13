@@ -45,6 +45,8 @@ extension LibraryViewController: UITableViewDataSource {
         cell.mainImage?.image = UIImage.init(named: data.imageURL ?? "")
         cell.playButton.addTarget(self, action: #selector(actionPlay(_:)), for: .touchUpInside)
         cell.playButton.tag = indexPath.row
+        cell.playButton.isAccessibilityElement = true
+        cell.isAccessibilityElement = true
         
         return cell
     }

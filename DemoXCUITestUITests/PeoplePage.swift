@@ -13,18 +13,21 @@ class PeoplePage: Page {
     
     func switchToPeople() -> Self {
         peopleTab.tap()
+        snapshot("switch to people page")
         return self
     }
     
     func swipeUpTableView() -> Self {
         let table = app.tables.element(boundBy: 0)
         table.swipeUp()
+        snapshot("swipe up page")
         return self
     }
     
     func swipeDownTableView() -> Self {
         let table = app.tables.element(boundBy: 0)
         table.swipeDown()
+        snapshot("swipe down page")
         return self
     }
 

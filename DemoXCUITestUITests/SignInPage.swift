@@ -16,6 +16,7 @@ class SignInPage: Page {
         textAccount.tap()
         
         app.typeText(text)
+        snapshot("text account")
         return self
     }
     
@@ -23,18 +24,21 @@ class SignInPage: Page {
         textPassword.tap()
         
         app.typeText(text)
+        snapshot("text password")
         return self
     }
     
     func hideKeyboard() -> Self {
         let element = app.children(matching: .window).element(boundBy: 0).children(matching: .other).element(boundBy: 1)
         element.children(matching: .other).element.children(matching: .other).element.tap()
+        snapshot("hide keyboard")
         return self
     }
     
     @discardableResult func actionSignIn() -> Self {
         let element = app.children(matching: .window).element(boundBy: 0).children(matching: .other).element(boundBy: 1)
         element.buttons["Sign In"].tap()
+        snapshot("sign in")
         return self
     }
 }

@@ -25,6 +25,7 @@
 		8F64803C21956BDD00D290A7 /* PeoplePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F64803B21956BDD00D290A7 /* PeoplePage.swift */; };
 		8F64803E21957D4000D290A7 /* SettingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F64803D21957D4000D290A7 /* SettingPage.swift */; };
 		8F64804021957E9E00D290A7 /* SignInPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F64803F21957E9E00D290A7 /* SignInPage.swift */; };
+		8F88751A219A656D00B36475 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F887519219A656D00B36475 /* SnapshotHelper.swift */; };
 		8F90590D2182F9F500C250DC /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F90590C2182F9F500C250DC /* UserData.swift */; };
 		8FF928642182D27900F02300 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF928632182D27900F02300 /* AppDelegate.swift */; };
 		8FF928692182D27900F02300 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FF928672182D27900F02300 /* Main.storyboard */; };
@@ -95,6 +96,7 @@
 		8F64803B21956BDD00D290A7 /* PeoplePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeoplePage.swift; sourceTree = "<group>"; };
 		8F64803D21957D4000D290A7 /* SettingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingPage.swift; sourceTree = "<group>"; };
 		8F64803F21957E9E00D290A7 /* SignInPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPage.swift; sourceTree = "<group>"; };
+		8F887519219A656D00B36475 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
 		8F90590C2182F9F500C250DC /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		8FF928602182D27900F02300 /* DemoXCUITest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoXCUITest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FF928632182D27900F02300 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -251,6 +253,7 @@
 				8F64803921951F0900D290A7 /* LibraryDetailPage.swift */,
 				8F33338C219421BE00CFD4D7 /* Page.swift */,
 				8FF9287A2182D27B00F02300 /* Info.plist */,
+				8F887519219A656D00B36475 /* SnapshotHelper.swift */,
 			);
 			path = DemoXCUITestUITests;
 			sourceTree = "<group>";
@@ -547,6 +550,7 @@
 				8FF9289C2182DD9000F02300 /* Utils.swift in Sources */,
 				8F64803A21951F0900D290A7 /* LibraryDetailPage.swift in Sources */,
 				8F33338D219421BE00CFD4D7 /* Page.swift in Sources */,
+				8F88751A219A656D00B36475 /* SnapshotHelper.swift in Sources */,
 				8F3333832194063000CFD4D7 /* LibraryData.swift in Sources */,
 				8F14CDB4218C493C00BDD680 /* LibraryTableViewCell.swift in Sources */,
 				8FF928872182D90A00F02300 /* LibraryViewController.swift in Sources */,

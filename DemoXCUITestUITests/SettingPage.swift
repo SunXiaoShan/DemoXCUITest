@@ -13,18 +13,21 @@ class SettingPage: Page {
     
     func switchToSetting() -> Self {
         settingTab.tap()
+        snapshot("switch to setting page")
         return self
     }
     
     func actionSignOut() -> Self {
         let element = app.buttons["Sign Out"]
         element.tap()
+        snapshot("sign out")
         return self
     }
     
     func actionSignIn() -> Self {
         let element = app.buttons["Sign In"]
         element.tap()
+        snapshot("sign in")
         return self
     }
 }

@@ -21,6 +21,7 @@ class LibraryDetailPage: Page {
         element.tap()
         element.tap()
         element.swipeDown()
+        snapshot("dismiss youtube")
         return self
     }
     
@@ -32,6 +33,7 @@ class LibraryDetailPage: Page {
             return self
         }
         element.tap()
+        snapshot("play video")
         return self
     }
     
@@ -52,6 +54,7 @@ class LibraryDetailPage: Page {
             return self
         }
         element.tap()
+        snapshot("press ok button")
         return self
     }
     

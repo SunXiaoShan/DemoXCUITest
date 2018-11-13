@@ -15,6 +15,7 @@ class LibraryPage: Page {
     
     func switchToLibrary() -> Self {
         libraryTab.tap()
+        snapshot("switch to library page")
         return self
     }
     
@@ -30,6 +31,7 @@ class LibraryPage: Page {
     
     func tapTableViewCell(_ index: Int) -> Self {
         getTableViewCell(index).tap()
+        snapshot("tab cell:\(index)")
         return self
     }
     
@@ -41,6 +43,7 @@ class LibraryPage: Page {
         }
         
         element.tap()
+        snapshot("switch to play video index:\(index)")
         return self
     }
 }
