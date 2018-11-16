@@ -70,12 +70,21 @@ class PeopleViewController: UIViewController {
                      avatar: "woman"
         )
     ]
-        
     
 
     @IBOutlet weak var mTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if(ProcessInfo.processInfo.arguments.contains("-UITest")) {
+            print("phineas - hello")
+            if UserDefaults.standard.bool(forKey: "HidePeopleView") == true {
+                mTableView.isHidden = true
+            }
+            
+        } else {
+            print("phineas - no hello")
+        }
         
         mTableView.dataSource = self
         mTableView.delegate = self
